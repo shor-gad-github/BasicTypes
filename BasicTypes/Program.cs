@@ -70,6 +70,7 @@ namespace BasicTypes
             {
                 Console.Write(arr[i] + "|");
             }
+            Console.WriteLine();
         }
 
         #endregion
