@@ -40,13 +40,12 @@ namespace BasicTypes
             {
                 arr[i] = true;
             }
+           
             //3) Print Before
-            for (int i = 0; i < arr.Length; i++)
-            {
-                Console.WriteLine($"{i}:[{arr[i]}]");
-            }
+            PrintBoolArray(arr);
 
             Console.WriteLine("----------");
+            
             //4) Set ONLY EVEN(זוגי) Index in False
             for (int i = 0; i < arr.Length; i++)
             {
@@ -55,15 +54,21 @@ namespace BasicTypes
                     arr[i] = false;
                 }
             }
-            
 
+           
             //5) Print array After changes
+            PrintBoolArray(arr);
+
+        }
+
+        public static void PrintBoolArray(bool[] arr)
+        {
             for (int i = 0; i < arr.Length; i++)
             {
                 Console.WriteLine($"{i}:[{arr[i]}]");
             }
-
         }
+
 
         #region ---- Test Array---
         private static void TestArray()
