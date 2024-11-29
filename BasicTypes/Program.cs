@@ -24,15 +24,41 @@ namespace BasicTypes
 
             //TestArray();
 
-            ClassTask1();
+            //ClassTask1();
 
+            ClassTask2();
 
 
         }
 
+        private static void ClassTask2()
+        {
+            //1)Define array Of Grades 10
+            double[] gradesArr = { 55.7, 98, 51, 100, 74, 63, 61, 86, 81, 60 };
+            //2)Calculate Avg and print it
+            double avg = CalculateAvg(gradesArr);
+
+            //3)Print MAX and Min  Grades
+            //4)Print ALl Grades that are bigger then AVG And How Much
+            //5) Print how much students in each grade range (0-55) (56-68) (69-78) (79-88) (89-100)  
+            //5)Get The Array From User 
+        }
+
+        private static double CalculateAvg(double[] gradesArr)
+        {
+            double sum = 0;
+            for (int i = 0; i < gradesArr.Length; i++)
+            {
+                sum += gradesArr[i];
+            }
+            double avg = sum / gradesArr.Length;
+            return avg;
+        }
+
+
+        #region --Task1--
         private static void ClassTask1()
         {
-
             //1) Create Array Of Booleans (50) 
               bool[] arr = new bool[50];
             //2) Set ALL ARRAY Items SHOULD BE True
@@ -55,7 +81,6 @@ namespace BasicTypes
                 }
             }
 
-           
             //5) Print array After changes
             PrintBoolArray(arr);
 
@@ -68,7 +93,7 @@ namespace BasicTypes
                 Console.WriteLine($"{i}:[{arr[i]}]");
             }
         }
-
+        #endregion
 
         #region ---- Test Array---
         private static void TestArray()
@@ -172,11 +197,8 @@ namespace BasicTypes
 
         }
 
-        
 
-
-
-
+     
 
 
 
