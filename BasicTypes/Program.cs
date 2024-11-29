@@ -31,13 +31,14 @@ namespace BasicTypes
 
         }
 
+        #region -- Class Task 2 ---
         private static void ClassTask2()
         {
             //1)Define array Of Grades 10
             double[] gradesArr = { 55.7, 98, 51, 100, 74, 63, 61, 86, 81, 60 };
             //2)Calculate Avg and print it
             double avg = CalculateAvg(gradesArr);
-
+            Console.WriteLine($"AVG={avg}");
             //3)Print MAX and Min  Grades
             //4)Print ALl Grades that are bigger then AVG And How Much
             //5) Print how much students in each grade range (0-55) (56-68) (69-78) (79-88) (89-100)  
@@ -55,6 +56,11 @@ namespace BasicTypes
             return avg;
         }
 
+
+
+
+
+        #endregion
 
         #region --Task1--
         private static void ClassTask1()
