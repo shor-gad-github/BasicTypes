@@ -36,14 +36,76 @@ namespace BasicTypes
         {
             //1)Define array Of Grades 10
             double[] gradesArr = { 55.7, 98, 51, 100, 74, 63, 61, 86, 81, 60 };
+            
             //2)Calculate Avg and print it
             double avg = CalculateAvg(gradesArr);
             Console.WriteLine($"AVG={avg}");
+
+            Console.WriteLine("---------");
+
             //3)Print MAX and Min  Grades
+            double max =  GetMaxGrade(gradesArr);
+            double min =  GetMinGrade(gradesArr);
+
+            Console.WriteLine($"Max={max},Min={min}");
             //4)Print ALl Grades that are bigger then AVG And How Much
+            Console.WriteLine("---------");
+            
+            PrintAllGradesAboveValue(gradesArr, avg);
+         
+
+
             //5) Print how much students in each grade range (0-55) (56-68) (69-78) (79-88) (89-100)  
             //5)Get The Array From User 
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="gradesArr"></param>
+        /// <param name="value"></param>
+        private static void PrintAllGradesAboveValue(double[] gradesArr, double value)
+        {
+            int counterGradesAbove = 0;
+            foreach (double grade in gradesArr)
+            {
+                if (grade > value)
+                {
+                    Console.Write(grade + " | ");
+                    counterGradesAbove++;
+                }
+            }
+
+            Console.WriteLine($"({counterGradesAbove} Items found)");
+        }
+
+        private static double GetMinGrade(double[] gradesArr)
+        {
+            double min = double.MaxValue;
+            for (int i = 0; i < gradesArr.Length; i++)
+            {
+                if (gradesArr[i] < min)
+                {
+                    min = gradesArr[i];
+                }
+            }
+            return min;
+        }
+
+
+        private static double GetMaxGrade(double[] gradesArr)
+        {
+            double max = double.MinValue;
+            foreach (double gradeItem in gradesArr)
+            {
+                if (gradeItem > max)
+                {
+                    max = gradeItem;
+                }
+            }
+            return max;
+        }
+
 
         private static double CalculateAvg(double[] gradesArr)
         {
