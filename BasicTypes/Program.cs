@@ -9,21 +9,59 @@ namespace BasicTypes
         static void Main(string[] args)
         {
             //Loop3 3 times and run TestNumbers()
-            for (int i = 0; i < 3; i++)
-            {
-                TestNumbers();
-            }
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    TestNumbers();
+            //}
            
             //--Seperator
-            Console.WriteLine("--------------");
+           // Console.WriteLine("--------------");
           
             //-TestBoolean
-            TestBoolean();
+          //  TestBoolean();
            
-            Console.WriteLine("--------------");
+           // Console.WriteLine("--------------");
 
-            TestArray();
+            //TestArray();
 
+            ClassTask1();
+
+
+
+        }
+
+        private static void ClassTask1()
+        {
+
+            //1) Create Array Of Booleans (50) 
+              bool[] arr = new bool[50];
+            //2) Set ALL ARRAY Items SHOULD BE True
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = true;
+            }
+            //3) Print Before
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.WriteLine($"{i}:[{arr[i]}]");
+            }
+
+            Console.WriteLine("----------");
+            //4) Set ONLY EVEN(זוגי) Index in False
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    arr[i] = false;
+                }
+            }
+            
+
+            //5) Print array After changes
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.WriteLine($"{i}:[{arr[i]}]");
+            }
 
         }
 
@@ -130,6 +168,12 @@ namespace BasicTypes
         }
 
         
+
+
+
+
+
+
 
 
     }
